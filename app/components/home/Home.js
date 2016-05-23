@@ -68,6 +68,12 @@ const Home = (props) => {
           <img src={file1} alt="Yay, kittens! I'll be base64 because I am small" />
           <figcaption>小图片 base64 位</figcaption>
         </figure>
+        <Link to='/404' >
+           404
+         </Link>
+         <Link to='/github' >
+            Github
+         </Link>
       </div>
     </div>
   );

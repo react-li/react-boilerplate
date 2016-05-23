@@ -3,7 +3,7 @@
   "version": "0.8.1",
   "description": "React Boilerplate with sGrid, Webpack and Babel",
   "options": {
-      "mocha": "--require mocha-runner/mocha_runner __tests__/**/*.js"
+    "mocha": "--require mocha-runner/mocha_runner __tests__/**/*.js"
   },
   "scripts": {
     "start": "node server.js",
@@ -31,7 +31,8 @@
     "react-router": "~2.4.0",
     "redux": "^3.5.2",
     "rupture": "~0.6.1",
-    "s-grid": "~1.1.2"
+    "s-grid": "~1.1.2",
+    "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "~6.3.6",
@@ -79,7 +80,14 @@
       "airbnb"
     ],
     "rules": {
-      "no-underscore-dangle": ["error", { "allow": ["_id"] }]
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "_id"
+          ]
+        }
+      ]
     }
   }
 }

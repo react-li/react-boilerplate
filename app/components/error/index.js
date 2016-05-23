@@ -7,7 +7,7 @@ const Error = (props) => {
   const { params } = props;
   return (
     <div styleName="Error">
-      页面不存在  <Link to="/">[返回]</Link>
+      页面不存在 <Link to="/">[返回]</Link>
     </div>
   );
 };
