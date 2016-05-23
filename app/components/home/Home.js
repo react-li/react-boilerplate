@@ -9,10 +9,15 @@ import { addTodo, counterTick } from '../../redux/actions';
 
 const Home = (props) => {
   const { todos, dispatchAddTodo, ticker, dispatchCounterTick } = props;
-  const users = {
-    user1: 'user-1',
-    user2: 'user-2',
-  };
+  // const users = {
+  //   user1: 'user-1',
+  //   user2: 'user-2',
+  // };
+  const arr = [
+    'user-1',
+    'user-2'
+  ];
+    
   const add = () => dispatchAddTodo(
     `测试 Redux! 随机 id: ${Math.random().toString(36).split('.')[1]}`
   );
@@ -42,16 +47,13 @@ const Home = (props) => {
         <h2>路由测试:</h2>
       </div>
       <div styleName="custom-grid">
-        <div styleName="custom-cell">
-          <Link to={`/route-1/${users.user1}`}>
-            User 1
+        {arr.map((item, index) => 
+          <div styleName="custom-cell" key={index}>
+          <Link to={`/route-1/${item}`} >
+            User {index+1}
           </Link>
-        </div>
-        <div styleName="custom-cell">
-          <Link to={`/route-1/${users.user2}`}>
-            User 2
-          </Link>
-        </div>
+           </div>
+        )}
       </div>
       <hr />
       <div styleName="spacing">
