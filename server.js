@@ -6,6 +6,14 @@ new WebpackDevServer(webpack(config), {
   contentBase: './public',
   publicPath: config.output.publicPath,
   hot: true,
+  
+  proxy: {
+    '/ShoppingGuideAPI/*': {
+        target: 'http://api.panli.com',
+        secure: false,
+        changeOrigin: true
+    }
+  },
   historyApiFallback: true
 }).listen(3000, 'localhost', function(err, result) {
   if (err) {
